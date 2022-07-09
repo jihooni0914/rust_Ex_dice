@@ -26,11 +26,11 @@ fn main() {
     println!("Enter the number of times to throw the dice ( 1 ~ 5 ) : ");
     let throw_num : usize = loop {
         let input = set_usize_value();
-        if input < 1 || input > 5 {
-            println!("invalid range : try again");
+        if input >= 1 && input <= 5 {
+            break input;
         }
         else {
-            break input;
+            println!("invalid range : try again");
         }
     };
 
